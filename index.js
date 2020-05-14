@@ -45,12 +45,11 @@ const image_bank = [ { imagePath: 'assets/1952_yankees.png', title: 'the 1952 ya
 let imageZone = document.getElementById('hiding-image');
 let hidingText = document.getElementById('hiding-text');
 imageZone.src = "./base_hat.png";
-
+let counter = 0;
 let Element = document.getElementById('button');
 Element.onclick = function () 
 {
-    let number = Math.floor(Math.random() * Math.floor(image_bank.length));
-    console.log(number);
-    imageZone.src = image_bank[number].imagePath;
-    hidingText.innerHTML = image_bank[number].title;
+    imageZone.src = image_bank[counter].imagePath;
+    hidingText.innerHTML = image_bank[counter].title;
+    counter++;
 }
