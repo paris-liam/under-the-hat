@@ -49,7 +49,12 @@ let counter = 0;
 let Element = document.getElementById('button');
 Element.onclick = function () 
 {
+    if(counter <= image_bank.length) {
+        counter++;
+    } else {
+        counter = 0;
+    }
     imageZone.src = image_bank[counter].imagePath;
     hidingText.innerHTML = image_bank[counter].title;
-    counter++;
+
 }
